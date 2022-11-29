@@ -29,3 +29,15 @@ UPDATE address SET address2 = 'MySQL Street', phone = '+65 999 777 5555' WHERE a
 
 /* DELETE Statement */
 DELETE FROM `rental` WHERE rental_id = 1; 
+
+/* LIMIT */
+SELECT * FROM `film` LIMIT 10; 
+SELECT * FROM `film` LIMIT 50;
+
+/* LIMIT with OFFSET */
+SELECT * FROM `film` LIMIT 0, 25; /* 0 - 25 */
+SELECT * FROM `film` LIMIT 25, 25;  /* 26 - 50 */
+SELECT * FROM `film` LIMIT 50, 25; /* 51 - 75 */
+
+/* Limit offset with order by */
+SELECT * FROM `film` ORDER BY title DESC LIMIT 50, 25; 
