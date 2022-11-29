@@ -107,3 +107,6 @@ SELECT * FROM `film_actor` WHERE EXISTS (SELECT actor_id FROM actor WHERE actor.
 /* INSERT INTO */
 INSERT INTO country_copy SELECT * FROM country;
 INSERT INTO country_copy(country) SELECT country FROM country;
+/* INSERT INTO */
+INSERT INTO country_copy SELECT * FROM country;
+INSERT INTO country_copy(country) SELECT country FROM country;
