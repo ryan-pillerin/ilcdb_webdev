@@ -83,3 +83,27 @@ SELECT * FROM actor as act LEFT JOIN film_actor as fa ON fa.actor_id = act.actor
 
 /* RIGHT JOIN */
 SELECT * FROM actor as act RIGHT JOIN film_actor as fa ON fa.actor_id = act.actor_id;
+
+/* Self Join */
+SELECT * FROM actor act, city c; 
+
+/* UNION */
+SELECT city, '' as country FROM city UNION SELECT '' as city, country FROM country ORDER BY `city` ASC 
+SELECT city as location FROM city UNION ALL SELECT country as location FROM country; 
+
+/* GROUP BY */
+SELECT act.last_name, f.title, f.description FROM `film_actor` as fa INNER JOIN actor act ON fa.actor_id = act.actor_id INNER JOIN film f ON f.film_id = fa.film_id GROUP BY f.title ORDER BY act.last_name ASC;
+
+/* HAVING */
+SELECT act.last_name, f.title, f.description  FROM `film_actor` as fa INNER JOIN actor act ON fa.actor_id = act.actor_id
+INNER JOIN film f ON f.film_id = fa.film_id
+GROUP BY f.title
+HAVING count(f.title) = 1
+ORDER BY act.last_name ASC;
+
+/* EXISTS */
+SELECT * FROM `film_actor` WHERE EXISTS (SELECT actor_id FROM actor WHERE actor.actor_id = film_actor.actor_id); 
+
+/* INSERT INTO */
+INSERT INTO country_copy SELECT * FROM country;
+INSERT INTO country_copy(country) SELECT country FROM country;
