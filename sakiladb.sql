@@ -58,4 +58,11 @@ SELECT SUM(amount) FROM `payment` where staff_id = 1;
 SELECT title, description, special_features FROM `film` where special_features LIKE '%Deleted Scenes%'; 
 SELECT title, description, special_features FROM `film` where special_features LIKE '%Deleted Scenes';
 SELECT title, description, special_features FROM `film` where special_features LIKE 'Deleted Scenes%';
-SELECT title, description, special_features FROM `film` where title LIKE 'a_%';  
+SELECT title, description, special_features FROM `film` where title LIKE 'a_%'; 
+SELECT title, description, special_features FROM `film` where title LIKE '%action%' AND description LIKE '%action%'; 
+SELECT title, description, special_features FROM `film` where title LIKE '%action%' OR description LIKE '%action%';
+
+/* IN Operator */
+SELECT * FROM `city` WHERE city IN('Davao', 'Davao City', 'Tagum', 'Manila', 'Davao Del Sur'); 
+SELECT * FROM `city` WHERE city NOT IN('Davao', 'Davao City', 'Tagum', 'Manila', 'Davao Del Sur'); 
+
