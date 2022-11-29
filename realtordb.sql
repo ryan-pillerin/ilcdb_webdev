@@ -16,3 +16,7 @@ INSERT INTO `registration` (`ID`, `first_name`, `middle_name`, `last_name`, `add
 SELECT * FROM `registration` WHERE address IS NULL;
 SELECT * FROM `registration` WHERE address IS NOT NULL; 
 
+UPDATE registration SET address = 'Manila' WHERE ID = 1;
+
+DELETE FROM `registration` WHERE ID = 1; 
+

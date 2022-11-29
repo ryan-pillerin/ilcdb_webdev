@@ -22,4 +22,10 @@ OR NOT rating = 'PG-13' ORDER BY title asc;
 /* INSERT STATEMENT */
 INSERT INTO city(city, country_id) VALUES('Davao City', 75);
 insert into city(city, country_id) values('Tagum', 75); 
-select * from city where country_id = 75;  
+select * from city where country_id = 75; 
+
+/* Update Statement */
+UPDATE address SET address2 = 'MySQL Street', phone = '+65 999 777 5555' WHERE address_id = 1; 
+
+/* DELETE Statement */
+DELETE FROM `rental` WHERE rental_id = 1; 
