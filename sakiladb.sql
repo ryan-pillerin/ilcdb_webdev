@@ -65,4 +65,21 @@ SELECT title, description, special_features FROM `film` where title LIKE '%actio
 /* IN Operator */
 SELECT * FROM `city` WHERE city IN('Davao', 'Davao City', 'Tagum', 'Manila', 'Davao Del Sur'); 
 SELECT * FROM `city` WHERE city NOT IN('Davao', 'Davao City', 'Tagum', 'Manila', 'Davao Del Sur'); 
+select * from city where country_id IN (select country_id from country where country = 'Philippines');
 
+/* Between operator */
+SELECT * FROM `film` where (replacement_cost BETWEEN 10 AND 20) AND (rental_rate BETWEEN 2 AND 4); 
+
+/* MySQL Alias */
+SELECT title as 'Title', description as 'Description', release_year as 'Release Year' FROM `film` as f;
+
+/* INNER JOIN */
+SELECT film.title, film.description, film.language_id, language.name FROM `film` INNER JOIN language ON language.language_id = film.language_id;
+SELECT ct.city, cntr.country FROM city as ct INNER JOIN country as cntr ON ct.country_id = cntr.country_id;
+SELECT f.title, stf.first_name, stf.last_name FROM inventory as invt INNER JOIN film as f ON f.film_id = invt.film_id INNER JOIN store as s ON s.store_id = invt.store_id INNER JOIN staff as stf ON stf.staff_id = s.manager_staff_id; 
+
+/* LEFT JOIN */
+SELECT * FROM actor as act LEFT JOIN film_actor as fa ON fa.actor_id = act.actor_id; 
+
+/* RIGHT JOIN */
+SELECT * FROM actor as act RIGHT JOIN film_actor as fa ON fa.actor_id = act.actor_id;
