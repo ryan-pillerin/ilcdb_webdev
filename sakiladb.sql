@@ -41,3 +41,15 @@ SELECT * FROM `film` LIMIT 50, 25; /* 51 - 75 */
 
 /* Limit offset with order by */
 SELECT * FROM `film` ORDER BY title DESC LIMIT 50, 25; 
+
+/* MINIMUM Function */
+SELECT MIN(rental_rate) FROM `film`;
+SELECT MIN(rental_rate), MAX(rental_rate) FROM `film`; 
+SELECT MIN(rental_rate), MAX(rental_rate) FROM `film` WHERE rating = 'G';
+
+/* COUNT, AVG, SUM */
+SELECT COUNT(film_id) FROM `film` WHERE rating = 'G';
+SELECT COUNT(film_id) FROM `film`;
+
+SELECT AVG(rental_duration) FROM `film` WHERE rating = 'PG';
+SELECT SUM(amount) FROM `payment` where staff_id = 1;
