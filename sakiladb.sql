@@ -53,3 +53,9 @@ SELECT COUNT(film_id) FROM `film`;
 
 SELECT AVG(rental_duration) FROM `film` WHERE rating = 'PG';
 SELECT SUM(amount) FROM `payment` where staff_id = 1;
+
+/* Like Operators */
+SELECT title, description, special_features FROM `film` where special_features LIKE '%Deleted Scenes%'; 
+SELECT title, description, special_features FROM `film` where special_features LIKE '%Deleted Scenes';
+SELECT title, description, special_features FROM `film` where special_features LIKE 'Deleted Scenes%';
+SELECT title, description, special_features FROM `film` where title LIKE 'a_%';  
