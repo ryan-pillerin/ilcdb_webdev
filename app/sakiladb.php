@@ -1,31 +1,26 @@
 <?php
 require('connection.php');
 
-/**
- * SELECT Query Actor
- */
+// SELECT with WHERE
+$cmd = $conn->prepare("SELECT first_name, last_name FROM actor WHERE first_name = ?");
+$name = 'PENELOPE';
+$cmd->bind_param('s', $name);
+$cmd->execute();
 
- /**
-  * SELECT without parameters
-  */
-/*$stmt = $db->prepare('SELECT * FROM actor');
-$stmt->execute();
-$result = $stmt->get_result();
-
-$json_array = array();
-while ($row = $result->fetch_assoc()) {
-   $json_array[] = $row;
+// Get the result
+$rows = $cmd->get_result();
+while ($row = $rows->fetch_assoc()) {
+  var_dump($row);
 }
 
-echo json_encode($json_array);*/
+echo '<br> WITH AND condition <br>';
 
-$stmt = $db->prepare("SELECT actor_id, last_name, first_name FROM actor WHERE last_name LIKE '%" . $_POST['search'] . "%' OR first_name LIKE '%" . $_POST['search'] . "%'");
-$stmt->execute();
-$result = $stmt->get_result();
+$cmd = $conn->prepare("SELECT first_name, last_name FROM actor WHERE first_name = ? AND last_name = ?");
+$name = array('PENELOPE', 'GUINESS');
+$cmd->bind_param('ss', $name[0], $name[1]);
+$cmd->execute();
 
-$json_array = array();
-while($row = $result->fetch_assoc()) {
-    $json_array[] = $row;
+$rows = $cmd->get_result();
+while ($row = $rows->fetch_assoc()) {
+  var_dump($row);
 }
-
-echo json_encode($json_array);

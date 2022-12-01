@@ -1,8 +1,7 @@
 <?php
 
-$db = new mysqli("localhost", "root", "", "sakila");
-
-if ($db->connect_errno) {
-    echo 'Connection Failed: ' . $db->connect_error();
-    exit();
+try {
+    $conn = new mysqli(getenv('HOSTNAME'), getenv('USERNAME'), getenv('PASSWORD'), getenv('DATABASE'));
+} catch (\Throwable $th) {
+    var_dump($th);
 }
