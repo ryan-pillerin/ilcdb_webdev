@@ -100,6 +100,24 @@
     </div>
     <div class="col-3">&nbsp;</div>
 </div>
+
+<div class="modal" tabindex="-1" id="registrationmodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Registration: Confirmation Message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>You have was successfully registered to Realto Application.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Ok</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- /HTML Body -->
 <script type="module">
     import Registration from './assets/js/components/realtor/Registration.js';

@@ -12,7 +12,13 @@ const Registration = () => {
 
         let response = await result.text();
         let data = JSON.parse(response);
-        console.log(data);
+        if ( data.status == 1 ) {
+            // Prompt the user
+            var myModal = new bootstrap.Modal(document.getElementById('registrationmodal'), {
+                keyboard: false
+            });
+            myModal.show();
+        }
     }
 
     const _eventListener = () => {
