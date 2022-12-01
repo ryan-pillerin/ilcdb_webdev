@@ -101,4 +101,8 @@
     <div class="col-3">&nbsp;</div>
 </div>
 <!-- /HTML Body -->
+<script type="module">
+    import Registration from './assets/js/components/realtor/Registration.js';
+    Registration().init();
+</script>
 <?php require_once('layouts/footer.php'); ?>
