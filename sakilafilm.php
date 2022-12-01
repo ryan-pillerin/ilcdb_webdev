@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Sakila Store";
-require_once("./layouts/sakila_header.php");
+    $pageTitle = "Film";
+    require_once("./layouts/sakila_header.php");
 ?>
 <div class="container">
     <ul class="nav">
@@ -11,7 +11,7 @@ require_once("./layouts/sakila_header.php");
             <a class="nav-link" href="sakilastore.php">Actors</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="sakilafilm.php">Film</a>
+            <a class="nav-link active" href="sakilafilm.php">Film</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Customer</a>
@@ -19,23 +19,12 @@ require_once("./layouts/sakila_header.php");
     </ul>
 
     <div class="section">
-        <!-- Search Box: Search for records under actor table with the condition of first and last name. -->
+        <!-- Search Box: Search for records under film table with the condition of all fields. -->
         <div class="row">
             <div class="col-12">
-                <form class="form-control" id="actorform">
-                    <!-- <div class="input-group mb-3">
-                        <span class="input-group-text">First Name</span>
-                        <input type="text" class="form-control" name="firstname" placeholder="First Name" />
-                    </div>
+                <form class="form-control" id="filmform">
                     <div class="input-group mb-3">
-                        <span class="input-group-text">Last Name</span>
-                        <input type="text" class="form-control" name="lastname" placeholder="Last Name" />
-                    </div>
-                    <div class="input-group mb-3">
-                        <button type="submit" class="btn btn-success">Search</button>
-                    </div>-->
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="search" id="searchtext" placeholder="Search Actor's Name" />
+                        <input type="text" class="form-control" name="search" id="searchfilm" placeholder="Search Film by Keywords" />
                         <button type="submit" class="btn btn-success">Search</button>
                     </div>
                 </form>
@@ -48,14 +37,17 @@ require_once("./layouts/sakila_header.php");
                     <table class="table table-striped table-hover table-bordered">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Actions</th>
+                                <th width="5%">#</th>
+                                <th width="15%">Title</th>
+                                <th width="40%">Description</th>
+                                <th width="10%">Release Year</th>
+                                <th width="5%">Rating</th>
+                                <th width="25%">Special Features</th>
                             </tr>
                         </thead>
-                        <tbody id="ListOfActors">
+                        <tbody id="ListOfFilms">
                             <tr>
-                                <td colspan="2">
+                                <td colspan="6">
                                     <div class="alert alert-info text-center" role="alert">
                                         No Record Found!
                                     </div>
@@ -69,9 +61,7 @@ require_once("./layouts/sakila_header.php");
     <div>
 </div>
 <script type="module">
-    import Actor from './assets/js/components/sakila_component/Actor.js';
-    Actor().init();
+    import Film from './assets/js/components/sakila_component/Film.js';
+    Film().init();
 </script>
-<?php
-require_once("./layouts/footer.php");
-?>
+<?php require_once("./layouts/footer.php"); ?>
