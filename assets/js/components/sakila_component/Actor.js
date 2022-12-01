@@ -6,7 +6,7 @@ const Actor = () => {
 
     const _getRecords = async () => {
 
-        elementListOfActors.innerHTML = `
+        /*elementListOfActors.innerHTML = `
         <tr>
             <td colspan="3" class="text-center">
                 <div class="spinner-border text-primary" role="status">
@@ -15,7 +15,7 @@ const Actor = () => {
                 <div class="text-muted">Retrieving Records...</div>
             </td>
         <tr>
-        `;
+        `;*/
 
         let results = await fetch('./app/sakila/actor/getrecords.php', {
             method: 'POST',
@@ -43,9 +43,14 @@ const Actor = () => {
 
     const _eventListerner = () => {
         let elementActorForm = document.getElementById('actorform');
+        let elementSearchText = document.getElementById('searchtext');
 
         elementActorForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            _getRecords();
+        });
+
+        elementSearchText.addEventListener('keyup', function() {
             _getRecords();
         });
     }

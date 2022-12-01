@@ -23,7 +23,7 @@ require_once("./layouts/sakila_header.php");
         <div class="row">
             <div class="col-12">
                 <form class="form-control" id="actorform">
-                    <div class="input-group mb-3">
+                    <!-- <div class="input-group mb-3">
                         <span class="input-group-text">First Name</span>
                         <input type="text" class="form-control" name="firstname" placeholder="First Name" />
                     </div>
@@ -32,6 +32,10 @@ require_once("./layouts/sakila_header.php");
                         <input type="text" class="form-control" name="lastname" placeholder="Last Name" />
                     </div>
                     <div class="input-group mb-3">
+                        <button type="submit" class="btn btn-success">Search</button>
+                    </div>-->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="search" id="searchtext" placeholder="Search Actor's Name" />
                         <button type="submit" class="btn btn-success">Search</button>
                     </div>
                 </form>
