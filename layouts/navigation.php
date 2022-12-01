@@ -14,6 +14,9 @@
                 <li class="nav-item">
                     <a class="nav-link <?php if ($pageTitle == 'Register') echo "active"; ?>" href="./register.php">Register</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link <?php if ($pageTitle == 'Login') echo "active"; ?>" href="./login.php">Login</a>
+                </li>
             </ul>
         </div>
     </div>
