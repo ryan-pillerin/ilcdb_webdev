@@ -18,6 +18,35 @@ const Registration = () => {
                 keyboard: false
             });
             myModal.show();
+        } else if (data.status == 0) {
+            // prompt email, phone, and username if they are already existed.
+            let elementTextEmail = document.getElementById('txtEmail');
+            let elementTextPhone = document.getElementById('txtPhone');
+            let elementTextUsername = document.getElementById('txtUsername');
+
+            let elementTextEmailFeedback = document.getElementById('emailInvalidFeedback');
+            let elementTextPhoneFeedback = document.getElementById('phoneInvalidFeedback');
+            let elementTextUsernameFeedback = document.getElementById('usernameInvalidFeedback');
+
+            elementTextEmail.classList.remove('is-invalid');
+            elementTextPhone.classList.remove('is-invalid');
+            elementTextUsername.classList.remove('is-invalid');
+            data.messages.map((validateditem) => {
+                if ( validateditem.type == 'email' ) {
+                    elementTextEmail.classList.add('is-invalid');
+                    elementTextEmailFeedback.innerHTML = validateditem.message;
+                }
+                
+                if ( validateditem.type == 'phone' ) {
+                    elementTextPhone.classList.add('is-invalid');
+                    elementTextPhoneFeedback.innerHTML = validateditem.message;
+                }
+
+                if ( validateditem.type == 'username' ) {
+                    elementTextUsername.classList.add('is-invalid');
+                    elementTextUsernameFeedback.innerHTML = validateditem.message;
+                }
+            });
         }
     }
 

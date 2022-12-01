@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-floating mb-1">
                         <select class="form-select" aria-label="City" id="cmbCity" name="city" placeholder="City/Municipality">                           
-                            <option value="davaocity">Davao City</option>
+                            <option value="Davao City">Davao City</option>
                             <option value="panabocity">Panabo City</option>
                             <option value="tagumcity">Tagum City</option>
                             <option value="mati">City of Mati</option>
@@ -73,15 +73,18 @@
                     <div class="form-floating mb-1">
                         <input type="email" class="form-control" id="txtEmail" name="email" placeholder="Email">
                         <label for="txtEmail">Email</label>
+                        <div class="invalid-feedback" id="emailInvalidFeedback"></div>
                     </div>
                     <div class="form-floating mb-1">
                         <input type="text" class="form-control" id="txtPhone" name="phone" placeholder="Phone">
                         <label for="txtPhone">Phone</label>
+                        <div class="invalid-feedback" id="phoneInvalidFeedback"></div>
                     </div>
                     <hr/>
                     <div class="form-floating mb-1">
                         <input type="text" class="form-control" id="txtUsername" name="username" placeholder="Username">
                         <label for="txtUsername">Username</label>
+                        <div class="invalid-feedback" id="usernameInvalidFeedback"></div>
                     </div>
                     <div class="form-floating mb-1">
                         <input type="password" class="form-control" id="txtPassword" name="password" placeholder="Password">
