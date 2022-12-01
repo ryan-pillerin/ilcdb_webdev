@@ -30,6 +30,14 @@
                         <label for="txtFirstname">Last Name</label>
                     </div>
                     <div class="form-floating mb-1">
+                        <input type="date" class="form-control" id="txtBirthDate" name="birthdate" placeholder="Birth Date">
+                        <label for="txtBirthdate">Birth Date</label>
+                    </div>
+                    <div class="form-floating mb-1">
+                        <input type="number" class="form-control" id="txtAge" name="age" placeholder="Age">
+                        <label for="txtAge">Age</label>
+                    </div>
+                    <div class="form-floating mb-1">
                         <textarea class="form-control" rows="3" style="height: 150px;" id="txtStreet" name="street" placeholder="Street"></textarea>
                         <label for="txtStreet">Street, Purok, Village, or Sitio</label>
                     </div>
