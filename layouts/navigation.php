@@ -25,5 +25,33 @@
                 <?php } ?>
             </ul>
         </div>
+        <?php if ( isset($_SESSION['accesstoken']) ) { ?>
+        <div class="btn-group dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="material-icons-outlined align-middle" style="font-size: 2rem;">
+                account_circle
+            </span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="settings.php">
+                        <span class="material-icons-outlined align-middle">
+                            manage_accounts
+                        </span>
+                        Settings
+                    </a>
+                </li>
+                <li><hr/></li>
+                <li>
+                    <a class="dropdown-item" href="./app/realtor/login/logout.php">
+                        <span class="material-icons-outlined align-middle">
+                            logout
+                        </span>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <?php } ?>
     </div>
 </nav>
