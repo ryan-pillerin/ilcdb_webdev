@@ -161,137 +161,14 @@
                             Property Images
                         </div>
                         <div class="card-body" style="height: 65vh; overflow: auto;">
-                            <div class="d-flex justify-content-between">
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
-                                <picture class="m-1">
-                                    <source srcset="./assets/images/logo.png" type="image/svg+xml">
-                                    <img src="./assets/images/logo.png" class="img-fluid img-thumbnail" alt="...">
-                                </picture>
+                            <div class="d-flex justify-content-between" id="diplayPropertyImage">
+                                
                             </div>
                         </div>
                         <div class="card-footer">
                             <form id="formPropertyImage">
                                 <div class="input-group">
-                                    <input type="file" class="form-control" id="filePropertyImage" aria-label="Upload">
+                                    <input type="file" class="form-control" name="propertyimage" id="filePropertyImage" aria-label="Upload">
                                     <button class="btn btn-outline-secondary" type="submit">Upload</button>
                                 </div>
                             </form>
@@ -308,4 +185,8 @@
   </div>
 </div>
 <!-- /HTML Body -->
+<script type="module">
+    import ImageProcessing from './assets/js/components/realtor/ImageProcessing.js';
+    ImageProcessing().init();
+</script>
 <?php require_once('layouts/footer.php'); ?>

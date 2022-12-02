@@ -1,4 +1,4 @@
-<!-- <form id="uploadfile">
+<form id="uploadfile">
     <input type="file" name="image" id="image" />
     <button type="submit">upload</button>
 </form>
@@ -20,4 +20,4 @@
         imagedisplay.setAttribute('src', 'data:image/jpeg;charset=utf-8;base64,' + response);
 
     });
-</script> -->
+</script>
