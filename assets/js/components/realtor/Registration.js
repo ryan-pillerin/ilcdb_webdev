@@ -50,18 +50,37 @@ const Registration = () => {
         }
     }
 
+    const _isInvalidateFormFields = (formObject) => {
+        let index = 0;
+        let isInvalid = false;
+
+        while (index < formObject.length) {
+            formObject[index].classList.remove('is-invalid');
+            if ( formObject[index].value == '' &&  formObject[index].getAttribute('name') != null ) {
+                //console.log(formObject[index].getAttribute('name') + ': Required Field');
+                formObject[index].classList.add('is-invalid');
+                isInvalid = true;
+            }
+            index += 1;
+        }
+
+        return isInvalid;
+    }
+
     const _eventListener = () => {
         let elementRegistrationForm = document.getElementById('registration_form');
 
         elementRegistrationForm.addEventListener('submit', function(e) {
             e.preventDefault();
             // Add Users to the Database
-            _saveUserToDatabase();
+            if ( _isInvalidateFormFields(formRegistrationData) == false ) {
+                _saveUserToDatabase();
+            }
         });
     }
 
     const init = () => {
-        //console.log(document.forms);
+        console.log(formRegistrationData);
         _eventListener();
     }
 

@@ -20,26 +20,32 @@
                     <div class="form-floating mb-1">
                         <input type="text" class="form-control" id="txtFirstname" name="firstname" placeholder="First Name">
                         <label for="txtFirstname">First Name</label>
+                        <div class="invalid-feedback">This is a required field.</div>
                     </div>
                     <div class="form-floating mb-1">
                         <input type="text" class="form-control" id="txtMiddlename" name="middlename" placeholder="Middle Name">
                         <label for="txtFirstname">Middle Name</label>
+                        <div class="invalid-feedback">This is a required field.</div>
                     </div>
                     <div class="form-floating mb-1">
                         <input type="text" class="form-control" id="txtLastname" name="lastname" placeholder="Last Name">
                         <label for="txtFirstname">Last Name</label>
+                        <div class="invalid-feedback">This is a required field.</div>
                     </div>
                     <div class="form-floating mb-1">
                         <input type="date" class="form-control" id="txtBirthDate" name="birthdate" placeholder="Birth Date">
                         <label for="txtBirthdate">Birth Date</label>
+                        <div class="invalid-feedback">This is a required field.</div>
                     </div>
                     <div class="form-floating mb-1">
                         <input type="number" class="form-control" id="txtAge" name="age" placeholder="Age">
                         <label for="txtAge">Age</label>
+                        <div class="invalid-feedback">This is a required field.</div>
                     </div>
                     <div class="form-floating mb-1">
                         <textarea class="form-control" rows="3" style="height: 150px;" id="txtStreet" name="street" placeholder="Street"></textarea>
                         <label for="txtStreet">Street, Purok, Village, or Sitio</label>
+                        <div class="invalid-feedback">This is a required field.</div>
                     </div>
                     <div class="form-floating mb-1">
                         <select class="form-select" aria-label="Province" id="cmbProvince" name="province" placeholder="Province">
@@ -50,6 +56,7 @@
                             <option value="davaooccidental">Davao Occidental</option>
                         </select>
                         <label for="cmbProvince">Province</label>
+                        <div class="invalid-feedback">This is a required field.</div>
                     </div>
                     <div class="form-floating mb-1">
                         <select class="form-select" aria-label="City" id="cmbCity" name="city" placeholder="City/Municipality">                           
@@ -63,36 +70,40 @@
                             <option value="malita">Malita</option>
                         </select>
                         <label for="cmbCity">City/Municipality</label>
+                        <div class="invalid-feedback">This is a required field.</div>
                     </div>
                     <div class="form-floating mb-1">
                         <select class="form-select" aria-label="Barangay" id="cmbBarangay" name="barangay" placeholder="Barangay">                       
                             <option value="poblacion">Poblacion</option>
                         </select>
                         <label for="cmbBarangay">Barangay</label>
+                        <div class="invalid-feedback">This is a required field.</div>
                     </div>
                     <div class="form-floating mb-1">
                         <input type="email" class="form-control" id="txtEmail" name="email" placeholder="Email">
                         <label for="txtEmail">Email</label>
-                        <div class="invalid-feedback" id="emailInvalidFeedback"></div>
+                        <div class="invalid-feedback" id="emailInvalidFeedback">This is a required field.</div>
                     </div>
                     <div class="form-floating mb-1">
                         <input type="text" class="form-control" id="txtPhone" name="phone" placeholder="Phone">
                         <label for="txtPhone">Phone</label>
-                        <div class="invalid-feedback" id="phoneInvalidFeedback"></div>
+                        <div class="invalid-feedback" id="phoneInvalidFeedback">This is a required field.</div>
                     </div>
                     <hr/>
                     <div class="form-floating mb-1">
                         <input type="text" class="form-control" id="txtUsername" name="username" placeholder="Username">
                         <label for="txtUsername">Username</label>
-                        <div class="invalid-feedback" id="usernameInvalidFeedback"></div>
+                        <div class="invalid-feedback" id="usernameInvalidFeedback">This is a required field.</div>
                     </div>
                     <div class="form-floating mb-1">
                         <input type="password" class="form-control" id="txtPassword" name="password" placeholder="Password">
                         <label for="txtPassword">Password</label>
+                        <div class="invalid-feedback" id="passwordInvalidFeedback">This is a required field.</div>
                     </div>
                     <div class="form-floating mb-1">
                         <input type="password" class="form-control" id="txtConfirmPassword" name="confirmpassword" placeholder="Confirm Password">
                         <label for="txtConfirmPassword">Confirm Password</label>
+                        <div class="invalid-feedback" id="confirmPasswordInvalidFeedback">This is a required field.</div>
                     </div>                
                 </div>
                 <div class="card-footer text-center">
