@@ -24,6 +24,7 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
                 'message' => 'The User was successfully login.',
                 'accesstoken' => $_SESSION['accesstoken'],
                 'user_info' => array(
+                    'id' => $arrResult['id'],
                     'name' => $arrResult['first_name'] . " " . $arrResult['last_name'],
                     'username' => $_POST['username']
                 )
