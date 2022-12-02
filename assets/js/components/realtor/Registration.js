@@ -50,6 +50,24 @@ const Registration = () => {
         }
     }
 
+    const _IsPasswordConfirm = () => {
+        
+        let elementTxtPassword = document.getElementById('txtPassword');
+        let elementTxtConfirmPassword = document.getElementById('txtConfirmPassword');
+
+        document.getElementById('confirmPasswordInvalidFeedback').innerHTML = 'This is a required field.';       
+        elementTxtConfirmPassword.classList.remove('is-invalid');
+
+        if ( elementTxtPassword.value === elementTxtConfirmPassword.value ) {
+            return true;
+        } else {            
+            elementTxtConfirmPassword.classList.add('is-invalid');
+            document.getElementById('confirmPasswordInvalidFeedback').innerHTML = 'Your password does not match to your confirm password.';
+            return false;
+        }
+
+    }
+
     const _isInvalidateFormFields = (formObject) => {
         let index = 0;
         let isInvalid = false;
@@ -69,13 +87,20 @@ const Registration = () => {
 
     const _eventListener = () => {
         let elementRegistrationForm = document.getElementById('registration_form');
+        let elementConfirmRegistration = document.getElementById('confirmregistration');
 
         elementRegistrationForm.addEventListener('submit', function(e) {
             e.preventDefault();
             // Add Users to the Database
             if ( _isInvalidateFormFields(formRegistrationData) == false ) {
-                _saveUserToDatabase();
+                if (_IsPasswordConfirm() == true) {
+                    _saveUserToDatabase();
+                }
             }
+        });
+
+        elementConfirmRegistration.addEventListener('click', function() {
+            window.location = 'login.php';
         });
     }
 

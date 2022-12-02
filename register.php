@@ -98,7 +98,7 @@
                     <div class="form-floating mb-1">
                         <input type="password" class="form-control" id="txtPassword" name="password" placeholder="Password">
                         <label for="txtPassword">Password</label>
-                        <div class="invalid-feedback" id="passwordInvalidFeedback">This is a required field.</div>
+                        <div class="invalid-feedback">This is a required field.</div>
                     </div>
                     <div class="form-floating mb-1">
                         <input type="password" class="form-control" id="txtConfirmPassword" name="confirmpassword" placeholder="Confirm Password">
@@ -126,7 +126,7 @@
         <p>You have was successfully registered to Realto Application.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Ok</button>        
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="confirmregistration">Ok</button>        
       </div>
     </div>
   </div>
