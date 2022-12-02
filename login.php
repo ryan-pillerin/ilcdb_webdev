@@ -1,5 +1,9 @@
 <?php
     $pageTitle = 'Login';
+    session_start();
+    if ( isset($_SESSION['accesstoken']) ) {
+        header('Location: /ilcdb_webdev/');
+    }
 ?>
 <?php require_once('layouts/header.php'); ?>
 <!-- HTML Body -->
@@ -11,6 +15,9 @@
             <h3 class="card-title text-center">Login</h3>
             <hr/>
             <div class="card-content">
+                <div class="alert alert-danger d-none" id="loginFeedback" role="alert">
+                <span class="material-icons-outlined align-middle">error_outline</span> Authentication Failed!
+                </div>
                 <form id="formLogin">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" name="username" id="txtUsername" placeholder="Username">
@@ -31,6 +38,6 @@
 <!-- /HTML Body -->
 <script type="module">
     import Login from './assets/js/components/realtor/Login.js';
-    
+    Login().init();
 </script>
 <?php require_once('layouts/footer.php'); ?>

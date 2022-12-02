@@ -11,12 +11,18 @@
                 <li class="nav-item">
                     <a class="nav-link <?php if ($pageTitle == 'Home') echo "active"; ?>" href="./">Home</a>
                 </li>
+                <?php if ( !isset($_SESSION['accesstoken']) ) { ?>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($pageTitle == 'Register') echo "active"; ?>" href="./register.php">Register</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($pageTitle == 'Login') echo "active"; ?>" href="./login.php">Login</a>
                 </li>
+                <?php } else { ?>
+                    <li class="nav-item">
+                        <a class="nav-link <?php if ($pageTitle == 'Dashboard') echo "active"; ?>" href="./dashboard.php">Dashboard</a>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
     </div>
