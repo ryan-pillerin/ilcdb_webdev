@@ -12,7 +12,7 @@
         Account Settings
     </div>
     <div class="card-body">
-        <form class="row g-3">
+        <form class="row g-3" id="formAccount">
             <div class="col-md-4">
                 <label for="txtFirstname" class="form-label">First Name</label>
                 <input type="text" class="form-control" name="firstname" id="txtFirstname" placeholder="Enter First Name">
@@ -76,4 +76,8 @@
     </div>
 </div>
 <!-- /HTML Body -->
+<script type="module">
+    import AccountSettings from './assets/js/components/realtor/AccountSettings.js';
+    AccountSettings().init();
+</script>
 <?php require_once('layouts/footer.php'); ?>
