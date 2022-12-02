@@ -15,6 +15,7 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
         $arrResult = $row;
     }
 
+    //echo json_encode($arrResult);
     if ( count($arrResult) > 0 ) {
         // User exists and authenticated
         $_SESSION['accesstoken'] = hash('sha256', $arrResult['id'] . "#" . $arrResult['last_updated']);

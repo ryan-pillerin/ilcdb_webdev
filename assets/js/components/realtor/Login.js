@@ -15,6 +15,7 @@ const Login = () => {
         let data = JSON.parse(response);
 
         // If status = 1, authenticed, else status = -1, authentication failed
+        //console.log(data);
         elementLoginFeedback.classList.add('d-none');
         if ( data.status == 1) {
             sessionStorage.setItem('user_info', JSON.stringify(data.body.user_info));
