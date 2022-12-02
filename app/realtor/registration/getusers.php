@@ -18,6 +18,9 @@ if ( $_SERVER['REQUEST_METHOD'] === 'GET' ) {
         echo json_encode($arrResult);
 
     } catch (\Throwable $th) {
-        //throw $th;
+        echo json_encode(array(
+            'status' => -1,
+            'message' => 'Something is not right!'
+        ));
     }
 }

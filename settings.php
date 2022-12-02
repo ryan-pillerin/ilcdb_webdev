@@ -25,6 +25,14 @@
                 <label for="txtLastname" class="form-label">Last Name</label>
                 <input type="text" class="form-control" name="lastname" id="txtLastname" placeholder="Enter Last Name">
             </div>
+            <div class="col-md-6">
+                <label for="txtLastname" class="form-label">Birth Date</label>
+                <input type="date" class="form-control" id="txtBirthDate" name="birthdate" placeholder="Birth Date">
+            </div>
+            <div class="col-md-6">
+                <label for="txtLastname" class="form-label">Age</label>
+                <input type="number" class="form-control" id="txtAge" name="age" placeholder="Age">
+            </div>
             <hr/>
             <div class="col-12">
                 <label for="txtStreet" class="form-label">Street, Purok, or Sitio</label>
@@ -74,6 +82,23 @@
             </div>
         </form>
     </div>
+</div>
+
+<div class="modal" tabindex="-1" id="updateAccountConfirmation">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirmation Message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>You have was successfully updated your account.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="accountConfirmation">Ok</button>        
+      </div>
+    </div>
+  </div>
 </div>
 <!-- /HTML Body -->
 <script type="module">
