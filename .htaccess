@@ -1,1 +1,7 @@
 
+php_value display_errors 1
+
+SetEnv HOSTNAME "localhost"
+SetEnv USERNAME "root"
+SetEnv PASSWORD ""
+SetEnv DATABASE "realtor"
