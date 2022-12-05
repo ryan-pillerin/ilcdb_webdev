@@ -2,18 +2,7 @@
 require_once('../../connection.php');
 session_start();
 
-$cmd = $conn->prepare("SELECT id, first_name, last_name, last_updated FROM registration");
-$cmd->execute();
-$rows = $cmd->get_result();
-
-$arrResult = array();
-while($row = $rows->fetch_assoc()) {
-    $arrResult[] = $row;
-}
-
-echo json_encode($arrResult);
-
-/*if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
     // Do the authentication    
     $password = md5($_POST['password']);
     $cmd = $conn->prepare("SELECT id, first_name, last_name, last_updated FROM registration WHERE username = ? AND password = ?");
@@ -25,9 +14,9 @@ echo json_encode($arrResult);
     while($row = $rows->fetch_assoc()) {
         $arrResult = $row;
     }
-
-    echo json_encode($arrResult);
-   /* if ( count($arrResult) > 0 ) {
+    
+    //echo json_encode($arrResult);
+    if ( count($arrResult) > 0 ) {
         // User exists and authenticated
         $_SESSION['accesstoken'] = hash('sha256', $arrResult['id'] . "#" . $arrResult['last_updated']);
         echo json_encode(array(
@@ -53,4 +42,4 @@ echo json_encode($arrResult);
 
 } else {
     header('Location: /ilcdb_webdev/login.php');
-}*/
+}
