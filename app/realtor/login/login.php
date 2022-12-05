@@ -15,8 +15,8 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
         $arrResult = $row;
     }
 
-    //echo json_encode($arrResult);
-    if ( count($arrResult) > 0 ) {
+    echo json_encode($arrResult);
+   /* if ( count($arrResult) > 0 ) {
         // User exists and authenticated
         $_SESSION['accesstoken'] = hash('sha256', $arrResult['id'] . "#" . $arrResult['last_updated']);
         echo json_encode(array(
@@ -38,7 +38,7 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
                 'message' => 'Authentication Failed!',
             )
         ));
-    }
+    }*/
 
 } else {
     header('Location: /ilcdb_webdev/login.php');

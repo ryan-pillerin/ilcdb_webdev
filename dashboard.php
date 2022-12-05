@@ -168,7 +168,7 @@
                         <div class="card-footer">
                             <form id="formPropertyImage">
                                 <div class="input-group">
-                                    <input type="file" class="form-control" name="propertyimage" id="filePropertyImage" aria-label="Upload">
+                                    <input type="file" class="form-control" name="image" id="image">
                                     <button class="btn btn-outline-secondary" type="submit">Upload</button>
                                 </div>
                             </form>

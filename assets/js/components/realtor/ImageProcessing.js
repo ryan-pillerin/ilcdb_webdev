@@ -3,28 +3,26 @@ const ImageProcessing = () => {
 
     let elmImageProperty = document.forms[2];
     let elmDisplayProperyImage = document.getElementById('diplayPropertyImage');
+    let elmFormImageProperty = document.getElementById('formPropertyImage');
     let htmlData = ``;
 
     const _processImage = async () => {
-        let result = await fetch('./app/realtor/property/processimage.php', {
+        let result = await fetch('./app/imageupload.php', {
             method: 'POST',
             body: new FormData(elmImageProperty)
         });
         let response = await result.text();
-        let data = JSON.parse(response);
-        console.log(data);
-        /*htmlData += `
+        htmlData += `
             <picture class="m-1">
-                <source srcset="data:image/jpeg;charset=utf-8;base64,${data}" type="image/svg+xml">
-                <img src="data:image/jpeg;charset=utf-8;base64,${data}" class="img-fluid img-thumbnail" alt="...">
+                <source srcset="data:image/jpeg;charset=utf-8;base64,${response}" type="image/svg+xml">
+                <img src="data:image/jpeg;charset=utf-8;base64,${response}" class="img-fluid img-thumbnail" alt="..." style="width:250px;">
             </picture>
         `;
-        elmDisplayProperyImage.innerHTML = htmlData;*/
+        elmDisplayProperyImage.innerHTML = htmlData;
+        elmFormImageProperty.reset();
     }
 
     const _eventListener = () => {
-        let elmFormImageProperty = document.getElementById('formPropertyImage');
-
         elmFormImageProperty.addEventListener('submit', function(e) {
             e.preventDefault();
             _processImage();
