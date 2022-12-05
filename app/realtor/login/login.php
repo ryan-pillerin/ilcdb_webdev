@@ -2,7 +2,18 @@
 require_once('../../connection.php');
 session_start();
 
-if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+$cmd = $conn->prepare("SELECT id, first_name, last_name, last_updated FROM registration");
+$cmd->execute();
+$rows = $cmd->get_result();
+
+$arrResult = array();
+while($row = $rows->fetch_assoc()) {
+    $arrResult[] = $row;
+}
+
+echo json_encode($arrResult);
+
+/*if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
     // Do the authentication    
     $password = md5($_POST['password']);
     $cmd = $conn->prepare("SELECT id, first_name, last_name, last_updated FROM registration WHERE username = ? AND password = ?");
@@ -38,8 +49,8 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
                 'message' => 'Authentication Failed!',
             )
         ));
-    }*/
+    }
 
 } else {
     header('Location: /ilcdb_webdev/login.php');
-}
+}*/
