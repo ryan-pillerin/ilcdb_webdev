@@ -54,8 +54,9 @@ try {
     } 
 
     // Username
+    $username = trim($_POST['username']);
     $cmd = $conn->prepare("SELECT id FROM registration WHERE username = ?");
-    $cmd->bind_param('s', trim($_POST['username']));
+    $cmd->bind_param('s', $username);
     $cmd->execute();
 
     $rows = $cmd->get_result();
