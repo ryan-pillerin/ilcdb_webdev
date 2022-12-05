@@ -2,19 +2,9 @@
 require_once('../../connection.php');
 session_start();
 
-$cmd = $conn->prepare("SELECT id, first_name, last_name, last_updated FROM registration");
-$cmd->execute();
-$rows = $cmd->get_result();
-
-while($row = $rows->fetch_assoc()) {
-    echo $row . " - " . md5($_POST['password']);
-}
-
-
-
-/*if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
     // Do the authentication    
-    $password = md5($_POST['password']);
+    $password = md5(trim($_POST['password']));
     $cmd = $conn->prepare("SELECT id, first_name, last_name, last_updated FROM registration WHERE username = ? AND password = ?");
     $cmd->bind_param('ss', $_POST['username'], $password);
     $cmd->execute();
@@ -52,4 +42,4 @@ while($row = $rows->fetch_assoc()) {
 
 } else {
     header('Location: /ilcdb_webdev/login.php');
-}*/
+}
