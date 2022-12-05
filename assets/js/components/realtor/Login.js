@@ -6,7 +6,7 @@ const Login = () => {
     const _loginAuthentication = async () => {
         let elementLoginFeedback = document.getElementById('loginFeedback');
 
-        let result = await fetch('./app/realtor/login/login.php', {
+        let result = await fetch('/ilcdb_webdev/app/realtor/login/login.php', {
             method: 'POST',
             body: new FormData(formLogin)
         });
@@ -18,8 +18,8 @@ const Login = () => {
         //console.log(data);
         elementLoginFeedback.classList.add('d-none');
         if ( data.status == 1) {
-            sessionStorage.setItem('user_info', JSON.stringify(data.body.user_info));
-            window.location = './';
+            window.sessionStorage.setItem('user_info', JSON.stringify(data.body.user_info));
+            window.location = '/ilcdb_webdev/';
         } else {
             console.log(data.body.message);
             elementLoginFeedback.classList.remove('d-none');
