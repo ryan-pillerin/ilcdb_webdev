@@ -5,7 +5,7 @@ session_start();
 if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
     // Do the authentication
     $username = trim($_POST['username']);    
-    $password = md5(trim($_POST['password']));
+    $password = trim($_POST['password']);
     $cmd = $conn->prepare("SELECT id, first_name, last_name, last_updated FROM registration WHERE username = ? AND password = ?");
     $cmd->bind_param('ss',$username , $password);
     $cmd->execute();

@@ -94,7 +94,7 @@ try {
         ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
         $username = trim($_POST['username']);
-        $password = md5(trim($_POST['password']));
+        $password = trim($_POST['password']);
         $birthdate = date_create($_POST['birthdate']);
         $birthdate = date_format($birthdate,"Y-m-d");
 
