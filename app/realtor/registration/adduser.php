@@ -92,6 +92,7 @@ try {
             password
         ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
+        $username = trim($_POST['username']);
         $password = md5(trim($_POST['password']));
         $birthdate = date_create($_POST['birthdate']);
         $birthdate = date_format($birthdate,"Y-m-d");
@@ -109,7 +110,7 @@ try {
             $_POST['barangay'],
             $_POST['email'],
             $_POST['phone'],
-            trim($_POST['username']),
+            $username,
             $password
         );
         $cmd->execute();
